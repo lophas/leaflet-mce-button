@@ -1,7 +1,7 @@
 (function() {
     tinymce.PluginManager.add('leaflet', function( editor, url ) {
         editor.addButton( 'leaflet', {
-            text: 'Leaflet',
+            text: '',
             tooltip: 'Insert Leaflet Map',
             icon: 'leaflet dashicons-before dashicons-location-alt',
             onclick: function() {
