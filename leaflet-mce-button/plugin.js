@@ -11,7 +11,7 @@
                         {
                             type   : 'textbox',
                             name   : 'address',
-                            label  : 'Street Address',
+                            label  : 'Venue or Street Address',
                             tooltip: 'Leave empty if Lat/Lon specified',
                             value  : ''
                         },
@@ -74,6 +74,11 @@
                         }
                         if(e.data.zoom != '') {
                           shortcode += ' zoom="' + e.data.zoom + '"';
+                          if(e.data.marker || e.data.title != '') {
+                            shortcode += ' fit_markers="false"';
+                          }
+                        } elseif(e.data.marker || e.data.title != '') {
+                          shortcode += ' fit_markers="true"';
                         }
                         if(e.data.width != '') {
                           shortcode += ' width="' + e.data.width + '"';
@@ -82,7 +87,7 @@
                           shortcode += ' height="' + e.data.height + '"';
                         }
                         shortcode += ']';
-                        if(e.data.marker) {
+                        if(e.data.marker || e.data.title != '') {
                           shortcode += '[leaflet-marker';
                           if(e.data.title != '') {
                             shortcode += ' visible="true"]' + e.data.title + '[/leaflet-marker]';
