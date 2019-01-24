@@ -77,7 +77,7 @@
                           if(e.data.marker || e.data.title != '') {
                             shortcode += ' fit_markers="false"';
                           }
-                        } elseif(e.data.marker || e.data.title != '') {
+                        } else if(e.data.marker || e.data.title != '') {
                           shortcode += ' fit_markers="true"';
                         }
                         if(e.data.width != '') {
