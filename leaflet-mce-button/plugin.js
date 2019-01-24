@@ -66,7 +66,7 @@
                         }
                     ],
                     onsubmit: function( e ) {
-                        shortcode = '[leaflet-map';
+                        shortcode = '[leaflet-map fit_markers="false"';
                         if(e.data.address != '') {
                           shortcode += ' address="' + e.data.address + '"';
                         } else if(e.data.lat != '' && e.data.lon != '') {
@@ -74,11 +74,8 @@
                         }
                         if(e.data.zoom != '') {
                           shortcode += ' zoom="' + e.data.zoom + '"';
-                          if(e.data.marker || e.data.title != '') {
-                            shortcode += ' fit_markers="false"';
-                          }
                         } else if(e.data.marker || e.data.title != '') {
-                          shortcode += ' fit_markers="true"';
+                          shortcode += ' zoom="12"';
                         }
                         if(e.data.width != '') {
                           shortcode += ' width="' + e.data.width + '"';
