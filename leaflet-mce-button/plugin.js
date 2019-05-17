@@ -63,7 +63,14 @@
                               label  : 'Marker title',
                               tooltip: 'Optional',
                               value  : ''
-                        }
+                        },
+                        {
+                            type   : 'textbox',
+                            name   : 'radius',
+                            label  : 'Circle radius (m)',
+                            tooltip: 'Optional',
+                            value  : ''
+                      }
                     ],
                     onsubmit: function( e ) {
                         shortcode = '[leaflet-map fit_markers="false"';
@@ -91,6 +98,9 @@
                           } else {
                             shortcode += ']';
                           }
+                        }
+                        if(e.data.radius != '') {
+                          shortcode += '[leaflet-circle radius="' + e.data.radius + '" fitbounds="false"]';
                         }
                         editor.insertContent( shortcode );
                     }

@@ -2,7 +2,7 @@
 /*
 	Plugin Name: Leaflet Map MCE Button
 	Description:
-	Version: 0.8
+	Version: 0.9
 	Plugin URI: https://github.com/lophas/leaflet-mce-button
 	GitHub Plugin URI: https://github.com/lophas/leaflet-mce-button
 	Author: Attila Seres
